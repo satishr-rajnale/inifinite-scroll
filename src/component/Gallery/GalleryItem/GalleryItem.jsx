@@ -1,5 +1,6 @@
 import React from "react";
 
+// addAndRemoveFavourite i am using for track the last images loaded
 const GalleryItem = ({
   images,
   lastImageElementRef,
@@ -8,10 +9,9 @@ const GalleryItem = ({
   return images.map((image, index) => {
     if (images.length === index + 1) {
       return (
-        <li>
+        <li key={image.id}>
           <img
             ref={lastImageElementRef}
-            key={image.id}
             src={`https://farm${image.farm}.staticflickr.com/${image.server}/${image.id}_${image.secret}.jpg`}
             alt={image.title}
           />
@@ -22,23 +22,21 @@ const GalleryItem = ({
       );
     } else {
       return (
-        <li>
+        <li key={image.id}>
           <img
-            key={image.id}
             src={`https://farm${image.farm}.staticflickr.com/${image.server}/${image.id}_${image.secret}.jpg`}
             alt={image.title}
           />
-          <div className="textdiv1">
+          <div className="title">
             <p className="p1">
               {image.title ? image.title.substr(0, 11) : "No title"}
             </p>
           </div>
-          <div className="textdiv2">
+          <div className="hrdiv">
             <hr />
           </div>
-          <div className="textdiv3">
-            {/* {image.title ? image.title.substr(0, 11) : "No author"} */}
-            {"No author"}
+          <div className="author">
+            {image.title ? image.title.substr(3, 11) : "No author"}
           </div>
           <div
             onClick={() => {

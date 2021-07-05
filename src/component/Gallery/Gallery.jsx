@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import useImageData from "../../useImageData";
+import useImageData from "../../utility/useImageData";
 import Loader from "../Shared/Loader";
 import GalleryItem from "./GalleryItem/GalleryItem";
 import "./Gallery.css";
@@ -14,6 +14,7 @@ const Gallery = () => {
     if (!localStorage["favouriteImages"]) {
       localStorage["favouriteImages"] = JSON.stringify(favouriteImages);
     }
+    // eslint-disable-next-line
   }, []);
 
   // getting image data from API

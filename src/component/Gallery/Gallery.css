@@ -50,6 +50,18 @@ li {
   opacity: 0.7;
 }
 
+.photo-container > ul li:hover div {
+  visibility: visible;
+  opacity: 1;
+}
+.photo-container .not-found {
+  width: 100%;
+}
+
+.photo-container:hover .middle {
+  opacity: 1;
+}
+
 hr {
   border: 1px solid #ffffff;
   max-width: 85px;
@@ -76,10 +88,9 @@ hr {
   margin: 0 auto;
   margin-top: 60%;
   padding: 5px;
-  transition: opacity 0.2s, visibility 0.2s;
 }
 
-.textdiv1 {
+.title {
   position: absolute;
   color: #ffffff;
   top: 0;
@@ -96,7 +107,7 @@ hr {
   padding: 5px;
 }
 
-.textdiv2 {
+.hrdiv {
   position: absolute;
   color: #ffffff;
   top: 0;
@@ -111,9 +122,8 @@ hr {
   margin: 0 auto;
   margin-top: 44%;
   padding: 5px;
-  transition: opacity 0.2s, visibility 0.2s;
 }
-.textdiv3 {
+.author {
   position: absolute;
   color: #ffffff;
   top: 0;
@@ -128,14 +138,12 @@ hr {
   margin: 0 auto;
   margin-top: 48%;
   padding: 5px;
-  transition: opacity 0.2s, visibility 0.2s;
 }
 
-.textdiv1 .p1 {
+.title .p1 {
   font: 30px Arial, sans-serif;
   font-weight: bold;
 }
-
 
 .favourite {
   color: rgba(0, 0, 0, 0.5);
